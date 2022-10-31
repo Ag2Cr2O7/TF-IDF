@@ -1,0 +1,121 @@
+The proliferation of massive open online courses (MOOCs)
+demands an effective way of personalized course recommendation. The recent attention-based recommendation models
+can distinguish the effects of different historical courses when
+recommending different target courses. However, when a user
+has interests in many different courses, the attention mechanism will perform poorly as the effects of the contributing
+courses are diluted by diverse historical courses. To address
+such a challenge, we propose a hierarchical reinforcement
+learning algorithm to revise the user profiles and tune the
+course recommendation model on the revised profiles.
+Recommender systems have been widely applied in various applications such as search engines, ad placement and e-commerce websites. The feedback data between users and items in recommender
+systems involve two sections: exposures and ratings. Chronologically, the system first provides users with a list of recommended
+items. Users click and rate items they like or dislike. Exposures
+indicate that users can not observe all items in each interaction,
+and the recommender system determines the exposure mechanism.
+Ratings express explicit preferences and reflect users’ interests in
+items. Its essential to remember that we could only reveal users' preferences on exposed items. Still, if the user does not see an item,
+we cannot conclude whether the user likes this item or not. Thereby,
+the underlying exposure mechanism may bias accurate inference
+for users' preferences.
+Recently, there has been growing interest in formulating recommendations in the context of causal inference [22, 29]. Specifically,
+the studies regard the recommendation that exposes an item to an
+user as an intervention in causal inference and frame estimating
+users’ preferences as solving the effect of interventions (a set of
+recommendations). In such manner, these approaches establish the
+spirit of recommender systems to answer a counterfactual question:
+"What would the response be if the user was recommended with
+other items?"
+For example, the recommender system first selects two items from the exposure space for the user who is interested in photography and the user renders the ratings, which we
+obtain the observational data. The remaining items in the whole
+item set are not exposed to the user, which we call the counterfactual samples. Based on the observational interactions, the system
+predicts the user’s preferences on other items and then offers recommendations. It perhaps forecasts the user will be interested in
+the mouse due to the high relevance between the mouse and the
+computer. However, the user’s natural preference is photography.
+The user has a high rating on the computer simply because he only
+saw these two items. And perhaps the user needs the computer
+to post-process photos, or the computer and the camera both belong to electronic products. Consequently, the natural preference
+of users is submerged due to the underlying exposure mechanism.
+Most modern recommender systems predict users’ preferences with
+two components: user and item embedding learning, followed by
+the user-item interaction modeling. By utilizing the auxiliary review
+information accompanied with user ratings, many of the existing
+review-based recommendation models enriched user/item embedding learning ability with historical reviews or better modeled
+user-item interactions with the help of available user-item target
+reviews. Though significant progress has been made, we argue that
+current solutions for review-based recommendation suffer from
+two drawbacks. First, as review-based recommendation can be naturally formed as a user-item bipartite graph with edge features
+from corresponding user-item reviews, how to better exploit this
+unique graph structure for recommendation? Second, while most
+current models suffer from limited user behaviors, can we exploit
+the unique self-supervised signals in the review-aware graph to guide two recommendation components better? To this end, in
+Graph mining algorithms have been playing a significant role in myriad fields over the years. However, despite their
+promising performance on various graph analytical tasks, most of these algorithms lack fairness considerations. As a consequence,
+they could lead to discrimination towards certain populations when exploited in human-centered applications. Recently, algorithmic
+fairness has been extensively studied in graph-based applications. In contrast to algorithmic fairness on independent and identically
+distributed (i.i.d.) data, fairness in graph mining has exclusive backgrounds, taxonomies, and fulfilling techniques. In this survey, we
+provide a comprehensive and up-to-date introduction of existing literature under the context of fair graph mining. Specifically, we
+propose a novel taxonomy of fairness notions on graphs, which sheds light on their connections and differences. We further present an
+organized summary of existing techniques that promote fairness in graph mining. Finally, we summarize the widely used datasets in
+this emerging research field and provide insights on current research challenges and open questions, aiming at encouraging
+cross-breeding ideas and further advances.
+In this issue, as part of our ongoing Century of Science project, wedig deep intohow the extraordinary advances in computing over the last 100 years have transformed our lives, and we ponder implications for the future. Who gets to decide how much control algorithms have over our lives? Will artificial intelligence learn how to really think like humans? What would ethical AI look like? And can we keep the robots from killing us?
+That last question may sound hypothetical, but it’s not. Asfreelancescience and technology writer Matthew Hutson reports,lethalautonomous dronesable to attack without human intervention already exist. And though killer drones may be the most dystopian vision of a future controlled by AI, software is already making decisions about our lives every day, from the advertisements we see on Facebook to influencing who gets deniedparolefrom prison.
+Even something as basic to human life as our social interactions can be used by AI to identify individuals within supposedly anonymized data, as staff writer Nikk Ogasa reports. Researchers taught an artificial neural network to identify patterns in the date, time, direction and duration of weekly mobile phone calls and texts in a large anonymized dataset. The AI was able to identify individuals by the patterns of their behavior and that of their contacts.
+Innovations in computing have come with astonishing speed, and we humans have adapted almost as quickly. I remember being thrilled with my first laptop, my first flip phone, my first BlackBerry. As we’ve welcomed each new marvel into our lives, we’ve bent our behavior. I could download a productivity app that promises to train me to stay focused, but using the phone to avoid the phone seems both too silly and too sad.
+Fulfilling Multiple Types of Fairness. It should be noted
+that any type of bias is undesired in real-world applications. In this regard, there is an urgent need to promote
+multiple types of fairness at the same time. For example,
+group fairness and individual fairness can be promoted at
+the same time under certain scenarios [44], [88]. However,
+promoting multiple types of fairness at the same time is a
+non-trivial problem, as promoting one type of fairness may
+degrade several other types of fairness [13], [22]. Such a
+phenomenon can be more pronounced on graphs, which is
+resulted from the dependency between neighboring nodes.
+For example, in a social network, individuals with the same
+gender are more densely connected. In this case, individual
+fairness enforces the nodes in the same gender subgroup
+to be similar (e.g., similar embeddings). However, such a
+goal may lead to a larger discrepancy between gender subgroups, which adversely affects the level of group fairness.
+Therefore, properly addressing multiple unfairness issues in
+graph mining simultaneously is a pressing problem.
+Balancing Model Utility and Algorithmic Fairness. For
+algorithms with fairness considerations, the utility such as
+prediction accuracy is usually sacrificed [30], [115], [161].
+Such a trade-off between utility and fairness has been studied on i.i.d. data in recent years. To achieve a satisfying
+trade-off, a common strategy is to ensure the algorithm bearing Pareto optimality [106], [132], i.e., a state where either
+utility or fairness cannot be promoted without harming the
+other one. Graph mining algorithms also have the issue of
+utility-fairness trade-off [38], [39], [55]. For example, when
+the fairness-related regularization is added to the objective
+function of a specific graph analytical task, the solution of
+the regularized optimization problem often deviates from
+the solution that brings the best utility in the unregularized optimization problem. Additionally, in an adversarial
+learning-based framework, when the generator successfully
+fools the discriminator, some useful information may also
+be wiped out from the embeddings or predictions given by
+the generator. This could also degrade the model utility performance in downstream tasks. Hence it is critical to study
+how to achieve a trade-off between utility and fairness.
+Explaining How Unfairness Arises. Although various debiasing strategies have been proposed to debias graph
+mining algorithms, systematically understanding how such
+unfairness arises in the underlying algorithm is also crucial.
+However, this problem can be challenging. A reason is
+that the exhibited unfairness is usually coupled with both
+the input graph and specific mechanisms in graph mining
+algorithms. For example, due to the message-passing mechanism in GNNs, the unfairness exhibited in the learned node
+embeddings can be attributed to the biased input graph
+topology [40]. Systematically explaining how unfairnessI arises in various graph mining algorithms remains a critical
+issue to be addressed.
+Enhancing Robustness of Algorithms on Fairness. In
+graph mining, enhancing the robustness of graph mining algorithms w.r.t. fairness is another urgent need. For instance,
+in learning-based algorithms, human annotators could provide biased supervision information for model training [20].
+Besides, the algorithms may also be manipulated by malicious attackers to exhibit discrimination against a certain
+group of people [7], [135]. In both cases, the fairness level
+of the algorithm predictions can be dramatically lowered.
+Despite the significance of enhancing the robustness of algorithmic fairness, most existing studies are overwhelmingly
+devoted to i.i.d. data [108], [135], and cannot be directly
+grafted to the graph-structured data. In this regard, how
+to promote the robustness of the fairness aspect of graph
+mining algorithms deserves further investigation.
+
+
