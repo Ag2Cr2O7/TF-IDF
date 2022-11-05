@@ -1,8 +1,8 @@
 ##################################################################
 #                     Python Homework                            #
 #                       20221114249                              #
-#                          向恒京                                 #
-#                      计算机科学与技术                             #
+#                       XiangHengjing                            #
+#                      计算机科学与技术                            #
 #                        2022/10/27                              #
 ##################################################################
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -23,7 +23,8 @@ class Sketch:
                                      smooth_idf=True,
                                      stop_words='english',
                                      use_idf=True,
-                                     ngram_range=(1,self.d))
+                                     ngram_range=(1,1),
+                                     max_features=self.d)
         #序列作为参数传递给拟合器
         features = vectorizer.fit_transform(corpus)
         return vectorizer, features
@@ -66,6 +67,11 @@ class Sketch:
         for i in tqdm(range(len(p))):
             pass
         return p
+
+
+
+
+
 
 
 
